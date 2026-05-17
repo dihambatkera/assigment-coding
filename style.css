@@ -12,7 +12,7 @@ html {
 
 body {
 
-  font-family: 'Comic Neue', 'Comic Sans MS', 'Comic Sans', cursive;
+  font-family: 'Chewy', 'Comic Sans MS', 'Comic Sans', cursive;
   background: #f4f4f4;
   color: #111;
   overflow-x: hidden;
@@ -40,7 +40,7 @@ body {
 
 .logo {
   color: white;
-  font-family: 'Comic Neue', cursive;
+  font-family: 'Chewy', cursive;
   font-size: 28px;
   white-space: nowrap;
   flex-shrink: 0;
@@ -59,7 +59,7 @@ body {
 .nav-links a {
   text-decoration: none;
   color: white;
-  font-family: 'Comic Neue', cursive;
+  font-family: 'Chewy', cursive;
   font-size: 18px;
   transition: color 0.3s;
   white-space: nowrap;
@@ -108,7 +108,7 @@ body {
 .content h1 {
   font-size: 52px;
   margin-bottom: 30px;
-  font-family: 'Comic Neue', cursive;
+  font-family: 'Chewy', cursive;
   letter-spacing: 1px;
 }
 
@@ -116,7 +116,7 @@ body {
 .content li {
   font-size: 20px;
   line-height: 1.8;
-  font-family: 'Comic Neue', cursive;
+  font-family: 'Chewy', cursive;
 }
 
 /* ============================
@@ -155,7 +155,7 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 24px;
-  font-family: 'Comic Neue', cursive;
+  font-family: 'Chewy', cursive;
 }
 
 /* ============================
@@ -178,7 +178,7 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 22px;
-  font-family: 'Comic Neue', cursive;
+  font-family: 'Chewy', cursive;
 }
 
 /* ============================
@@ -200,7 +200,7 @@ body {
   justify-content: center;
   align-items: center;
   font-size: 22px;
-  font-family: 'Comic Neue', cursive;
+  font-family: 'Chewy', cursive;
 }
 
 /* ============================
@@ -215,7 +215,7 @@ button {
   font-size: 18px;
   border-radius: 12px;
   cursor: pointer;
-  font-family: 'Comic Neue', cursive;
+  font-family: 'Chewy', cursive;
   letter-spacing: 1px;
   -webkit-tap-highlight-color: transparent;
   touch-action: manipulation;
@@ -258,7 +258,7 @@ button:active {
 .popup-box h2 {
   font-size: 38px;
   margin-bottom: 12px;
-  font-family: 'Comic Neue', cursive;
+  font-family: 'Chewy', cursive;
   color: white;
   letter-spacing: 1px;
 }
@@ -266,7 +266,7 @@ button:active {
 .popup-box p {
   font-size: 20px;
   color: white;
-  font-family: 'Comic Neue', cursive;
+  font-family: 'Chewy', cursive;
   margin-bottom: 4px;
 }
 
@@ -279,7 +279,7 @@ button:active {
   text-align: center;
   padding: 25px 20px;
   font-size: 17px;
-  font-family: 'Comic Neue', cursive;
+  font-family: 'Chewy', cursive;
   letter-spacing: 1px;
 }
 
