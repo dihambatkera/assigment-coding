@@ -1,33 +1,37 @@
+
 html {
   scroll-behavior: smooth;
-  overflow-x: hidden;   
+  overflow-x: hidden;
 }
 
-* {
+*, *::before, *::after {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  max-width: 100%;      
 }
 
 body {
-  font-family: "Comic Sans MS", "Comic Sans", cursive;
+
+  font-family: 'Comic Neue', 'Comic Sans MS', 'Comic Sans', cursive;
   background: #f4f4f4;
   color: #111;
-  overflow-x: hidden;   
+  overflow-x: hidden;
   width: 100%;
+  font-size: 18px;
 }
 
+/* ============================
+   NAVBAR
+   ============================ */
 .navbar {
   width: 100%;
   background: black;
   padding: 0 30px;
   height: 65px;
-
   display: flex;
+  flex-direction: row;
   justify-content: space-between;
   align-items: center;
-
   position: fixed;
   top: 0;
   left: 0;
@@ -38,38 +42,55 @@ body {
   color: white;
   font-family: 'Comic Neue', cursive;
   font-size: 28px;
+  white-space: nowrap;
+  flex-shrink: 0;
 }
 
+/* ============================
+   NAV LINKS — desktop
+   ============================ */
 .nav-links {
   display: flex;
   list-style: none;
-  gap: 20px;
+  gap: 18px;
+  align-items: center;
 }
 
 .nav-links a {
   text-decoration: none;
   color: white;
-  font-family: 'Patrick Hand', cursive;
-  font-size: 20px;
+  font-family: 'Comic Neue', cursive;
+  font-size: 18px;
   transition: color 0.3s;
+  white-space: nowrap;
 }
 
 .nav-links a:hover {
   color: yellow;
 }
 
+/* ============================
+   BURGER — hidden on wide screens
+   ============================ */
 .burger {
   display: none;
-  font-size: 35px;
+  font-size: 32px;
   color: white;
   cursor: pointer;
   user-select: none;
   line-height: 1;
+  padding: 4px 8px;
+  flex-shrink: 0;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
+/* ============================
+   SECTIONS
+   ============================ */
 .section {
   min-height: 100vh;
-  padding: 100px clamp(16px, 5vw, 50px) 50px;
+  padding: 90px 30px 50px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -80,23 +101,27 @@ body {
   width: 100%;
   max-width: 900px;
   text-align: center;
-  overflow-wrap: break-word; 
+  overflow-wrap: break-word;
   word-break: break-word;
 }
 
 .content h1 {
-  font-size: clamp(28px, 6vw, 60px);  
+  font-size: 52px;
   margin-bottom: 30px;
   font-family: 'Comic Neue', cursive;
+  letter-spacing: 1px;
 }
 
 .content p,
 .content li {
-  font-size: clamp(16px, 2.5vw, 22px);
+  font-size: 20px;
   line-height: 1.8;
+  font-family: 'Comic Neue', cursive;
 }
 
-
+/* ============================
+   SECTION COLOURS
+   ============================ */
 .home       { background: #ffd6d6; }
 .biodata    { background: #d6f0ff; }
 .experience { background: #fff0b3; }
@@ -106,27 +131,36 @@ body {
 .skills     { background: #d6fff7; }
 .contact    { background: #e2e2e2; }
 
-
+/* ============================
+   CARD
+   ============================ */
 .card {
   background: white;
   padding: 30px;
   border: 4px solid black;
   border-radius: 20px;
+  width: 100%;
 }
 
+/* ============================
+   PLACEHOLDER IMAGE
+   ============================ */
 .placeholder-image {
-  width: min(300px, 80vw);   
-  height: min(300px, 80vw);
+  width: min(300px, 75vw);
+  height: min(300px, 75vw);
   margin: 30px auto;
   background: white;
   border: 5px dashed black;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: clamp(18px, 4vw, 30px);
-  font-family: 'Patrick Hand', cursive;
+  font-size: 24px;
+  font-family: 'Comic Neue', cursive;
 }
 
+/* ============================
+   FAMILY
+   ============================ */
 .family-box {
   display: flex;
   flex-wrap: wrap;
@@ -135,65 +169,77 @@ body {
 }
 
 .member {
-  width: clamp(110px, 35vw, 180px);
-  height: clamp(110px, 35vw, 180px);
+  width: 160px;
+  height: 160px;
   background: white;
   border: 4px solid black;
   border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: clamp(16px, 4vw, 25px);
-  font-family: 'Patrick Hand', cursive;
+  font-size: 22px;
+  font-family: 'Comic Neue', cursive;
 }
 
-
+/* ============================
+   GALLERY
+   ============================ */
 .gallery-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(min(180px, 42vw), 1fr));
+  grid-template-columns: repeat(2, 1fr);
   gap: 16px;
   width: 100%;
 }
 
 .gallery-item {
-  height: clamp(120px, 25vw, 200px);
+  height: 160px;
   background: white;
   border: 4px solid black;
   border-radius: 20px;
   display: flex;
   justify-content: center;
   align-items: center;
-  font-size: clamp(18px, 3.5vw, 30px);
-  font-family: 'Patrick Hand', cursive;
+  font-size: 22px;
+  font-family: 'Comic Neue', cursive;
 }
 
+/* ============================
+   BUTTON
+   ============================ */
 button {
   margin-top: 20px;
-  padding: 15px 25px;
+  padding: 14px 28px;
   border: none;
   background: black;
   color: white;
   font-size: 18px;
   border-radius: 12px;
   cursor: pointer;
-  font-family: 'Fredoka', sans-serif;
+  font-family: 'Comic Neue', cursive;
+  letter-spacing: 1px;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
 }
 
-button:hover {
+button:hover,
+button:active {
   background: #444;
 }
 
+/* ============================
+   POPUP
+   ============================ */
 .popup {
   position: fixed;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.7);
-  display: none;              
+  background: rgba(0, 0, 0, 0.75);
+  display: none;
   justify-content: center;
   align-items: center;
-  z-index: 2000;
+  z-index: 9999;
 }
 
 .popup.show {
@@ -202,50 +248,60 @@ button:hover {
 
 .popup-box {
   background: rgb(255, 9, 91);
-  padding: clamp(20px, 5vw, 40px);
+  padding: 36px 30px;
   border-radius: 20px;
   border: 5px solid black;
   text-align: center;
-  width: min(350px, 90vw);  
+  width: min(360px, 88vw);
 }
 
 .popup-box h2 {
-  font-size: 40px;
-  margin-bottom: 15px;
+  font-size: 38px;
+  margin-bottom: 12px;
   font-family: 'Comic Neue', cursive;
   color: white;
+  letter-spacing: 1px;
 }
 
 .popup-box p {
-  font-size: 22px;
+  font-size: 20px;
   color: white;
+  font-family: 'Comic Neue', cursive;
+  margin-bottom: 4px;
 }
 
+/* ============================
+   FOOTER
+   ============================ */
 .footer {
   background: black;
   color: white;
   text-align: center;
-  padding: 25px;
-  font-size: 18px;
-  font-family: 'Patrick Hand', cursive;
+  padding: 25px 20px;
+  font-size: 17px;
+  font-family: 'Comic Neue', cursive;
+  letter-spacing: 1px;
 }
 
-@media (max-width: 768px) {
+/* ============================
+   BURGER BREAKPOINT — 900px
+   Covers ALL phones + landscape
+   ============================ */
+@media (max-width: 900px) {
 
-  .navbar {
-    padding: 0 20px;
-    flex-direction: row;
-  }
-
+  /* Show burger button */
   .burger {
-    display: block;
+    display: flex;
+    align-items: center;
+    justify-content: center;
   }
 
+  /* Collapse nav into dropdown */
   .nav-links {
     position: fixed;
     top: 65px;
     left: 0;
-    width: 100vw;      
+    width: 100%;
     background: black;
     flex-direction: column;
     align-items: center;
@@ -253,12 +309,13 @@ button:hover {
     padding: 0;
     max-height: 0;
     overflow: hidden;
-    transition: max-height 0.35s ease, padding 0.35s ease;
+    transition: max-height 0.35s ease;
+    z-index: 999;
   }
 
   .nav-links.active {
-    max-height: 600px;
-    padding: 15px 0 20px;
+    max-height: 650px;
+    padding: 10px 0 18px;
   }
 
   .nav-links li {
@@ -268,28 +325,87 @@ button:hover {
 
   .nav-links a {
     display: block;
-    padding: 12px 0;
+    padding: 13px 0;
     font-size: 22px;
-    border-bottom: 1px solid #333;
+    border-bottom: 1px solid #2a2a2a;
+    white-space: normal;
   }
 
   .nav-links li:last-child a {
     border-bottom: none;
   }
 
+  /* Sections perfectly centered */
   .section {
-    padding: 85px clamp(16px, 5vw, 24px) 40px;
-    align-items: center;    
+    padding: 85px 20px 50px;
+    align-items: center;
     justify-content: center;
+    min-height: 100vh;
+  }
+
+  .content h1 {
+    font-size: 36px;
+  }
+
+  .content p,
+  .content li {
+    font-size: 18px;
+  }
+
+  .card {
+    padding: 20px;
+  }
+
+  .member {
+    width: 130px;
+    height: 130px;
+    font-size: 18px;
+  }
+
+  .gallery-item {
+    height: 120px;
+    font-size: 18px;
   }
 }
 
-@media (max-width: 360px) {
-  .logo {
-    font-size: 20px;
-  }
+/* ============================
+   SMALL PHONES  ≤ 400px
+   ============================ */
+@media (max-width: 400px) {
 
   .navbar {
-    padding: 0 12px;
+    padding: 0 14px;
+  }
+
+  .logo {
+    font-size: 22px;
+  }
+
+  .burger {
+    font-size: 28px;
+  }
+
+  .content h1 {
+    font-size: 28px;
+  }
+
+  .content p,
+  .content li {
+    font-size: 16px;
+  }
+
+  .member {
+    width: 110px;
+    height: 110px;
+    font-size: 16px;
+  }
+
+  .gallery-item {
+    height: 100px;
+    font-size: 16px;
+  }
+
+  .placeholder-image {
+    font-size: 18px;
   }
 }
